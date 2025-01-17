@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Hub</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><h1>Vortex Hub</h1></a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="#Services">Services</a>
+            <a href="#AboutUs">About Us</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </header>
+    <section class="heading">
+        <div class="heading-content">
+            <h1>Vortex</h1>
+        </div>
+    </section>
+
+
+    <section id="Services" class="reveal">
+        <div class="title">
+        <h2>Our Services</h2>
+        <span>These are the services we offer</span>
+        </div>
+        <div class="service-container">
+            <div class="service-item">
+                <a href="#webdev">
+                <img src="./assets/img/webdev.png" alt="Web Development">
+                <h3>Web Development</h3>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="#graphic">
+                <img src="./assets/img/graphic.jpg" alt="Graphic Designing">
+                <h3>Graphic Designing</h3>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="#python">
+                <img src="./assets/img/python.jpg" alt="Python Programming">
+                <h3>Python Programming</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="AboutUs" class="about">
+        <div class="about-content">
+        <h1>About Us</h1>
+        <p>At Vortex Hub, we are passionate innovators dedicated to transforming ideas into impactful digital experiences. Founded
+        with the vision to empower businesses and individuals, we specialize in Web Development, Graphic Designing, and Python
+        Programming, delivering tailored solutions that drive growth and success. Our team of creative thinkers and skilled developers thrives on pushing boundaries. We combine modern design aesthetics,
+        cutting-edge technology, and strategic problem-solving to build seamless, user-friendly products. Whether you're a
+        startup seeking to establish a digital footprint or a corporation aiming to optimize operations, Vortex Hub is committed
+        to turning your vision into reality.</p> <br>
+        <p>We believe in long-term partnerships built on trust, transparency, and results. Our collaborative approach ensures that
+        each project reflects the unique identity and goals of our clients. At Vortex Hub, we don't just create websites or
+        designs—we craft meaningful digital experiences that captivate audiences and elevate brands.</p><br>
+        <p>Join us on this journey of innovation and excellence. Let Vortex Hub be the catalyst for your success in the digital
+        world.</p>
+        </div>
+    </section>
+
+    <section id="Contact" class="reveal">
+        <h2>Contact Us</h2>
+        <p>Email: contact@vortexhub.com</p>
+        <p>Phone: +123 456 7890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vortex Hub. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
